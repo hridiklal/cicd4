@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:xsi="http://m.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -20,11 +20,12 @@
         <junit.version>5.9.2</junit.version>
     </properties>
     
+    <!-- Fixed: Use hardcoded repository URL -->
     <distributionManagement>
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/${env.GITHUB_REPOSITORY_OWNER}/${env.GITHUB_REPOSITORY_NAME}</url>
+            <url>https://maven.pkg.github.com/hridiklal/cicd4</url>
         </repository>
     </distributionManagement>
     

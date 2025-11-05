@@ -8,7 +8,7 @@
         <server>
             <id>github</id>
             <username>abcd</username>
-            <password>${pass}</password>
+            <password>pass</password>
         </server>
     </servers>
 </settings>

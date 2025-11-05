@@ -7,8 +7,8 @@
     <servers>
         <server>
             <id>github</id>
-            <username>abcd</username>
-            <password>pass</password>
+            <username>${hridiklal}</username>
+            <password>${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}</password>
         </server>
     </servers>
 </settings>

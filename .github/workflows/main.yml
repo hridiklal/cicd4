@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: lalu
     permissions:
       contents: read
 
@@ -32,7 +32,7 @@ jobs:
         find target/ -name "*.jar" -o -name "*.war" | head -10 || echo "No artifacts found"
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: lalu
     needs: build
     
     steps:
@@ -58,7 +58,7 @@ jobs:
         retention-days: 30
 
   package:
-    runs-on: ubuntu-latest
+    runs-on: lalu
     needs: test
     
     steps:
@@ -83,7 +83,7 @@ jobs:
         retention-days: 7
 
   publish:
-    runs-on: ubuntu-latest
+    runs-on: lalu
     needs: package
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     permissions:
@@ -110,7 +110,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   integration:
-    runs-on: ubuntu-latest
+    runs-on: lalu
     needs: [build, test, package]
     if: always()
     
